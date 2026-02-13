@@ -1,22 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Celebration</title>
-    <script>
-        function showMessage() {
-            alert('Happy Birthday Srijana');
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f8ff;
         }
-    </script>
+        .balloon {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .balloon:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Birthday Celebration</h1>
-    <p>Enjoy the celebration with lots of balloons!</p>
-    <div>
-        <img src="balloon1.png" alt="Balloon 1" onclick="showMessage()" style="cursor:pointer;">
-        <img src="balloon2.png" alt="Balloon 2" onclick="showMessage()" style="cursor:pointer;">
-        <img src="balloon3.png" alt="Balloon 3" onclick="showMessage()" style="cursor:pointer;">
-    </div>
+    <script>
+        function balloonClick() {
+            alert('Happy Birthday! 🎉');
+        }
+    </script>
+    <svg width="100%" height="100%">
+        <g class="balloon" onclick="balloonClick()">
+            <ellipse cx="100" cy="100" rx="30" ry="40" fill="red"/>
+            <line x1="100" y1="140" x2="100" y2="180" stroke="black" stroke-width="2"/>
+        </g>
+        <g class="balloon" onclick="balloonClick()" transform="translate(200, 50)">
+            <ellipse cx="0" cy="0" rx="30" ry="40" fill="blue"/>
+            <line x1="0" y1="40" x2="0" y2="80" stroke="black" stroke-width="2"/>
+        </g>
+        <g class="balloon" onclick="balloonClick()" transform="translate(400, 100)">
+            <ellipse cx="0" cy="0" rx="30" ry="40" fill="green"/>
+            <line x1="0" y1="40" x2="0" y2="80" stroke="black" stroke-width="2"/>
+        </g>
+    </svg>
 </body>
 </html>
