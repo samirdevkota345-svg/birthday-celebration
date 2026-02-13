@@ -1,0 +1,7 @@
+body { margin: 0; font-family: 'Comic Sans MS', cursive, sans-serif; background: linear-gradient(135deg, #f6d365, #fda085); overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; color: #fff; text-align: center; }
+h1 { font-size: 4em; margin: 0.2em 0; text-shadow: 2px 2px 5px #000; }
+p { font-size: 1.5em; margin: 0.2em 0 1em 0; }
+.balloon { position: absolute; width: 60px; height: 80px; border-radius: 50%; cursor: pointer; animation: float 6s ease-in-out infinite; }
+@keyframes float { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-400px) rotate(20deg); } 100% { transform: translateY(0) rotate(-20deg); } }
+.confetti { position: absolute; width: 10px; height: 10px; background-color: yellow; animation: confettiFall 3s linear forwards; }
+@keyframes confettiFall { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(600px) rotate(720deg); opacity: 0; } }
